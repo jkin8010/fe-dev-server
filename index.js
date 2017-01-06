@@ -48,6 +48,7 @@ module.exports = function (config) {
 
 		var lrServer = livereload.createServer({
 			exts: [ 'html', 'css', 'js', 'png', 'gif', 'jpg', 'json', 'jsp', 'vm' ],
+			exclusions: [/node_modules\//, /\\.git\//, /\\.svn\//, /\\.hg\//],
 			port: config.livereloadPort
 		});
 
